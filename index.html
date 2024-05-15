@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GOIT-MARKUP-HW-05</title>
+    <title>GOIT-MARKUP-HW-06</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +23,7 @@
     <!-- Header -->
 
     <header class="header">
-      <div class="container header-conteiner">
+      <div class="container header-container">
         <nav class="navigation">
           <a class="logo" href="./index.html"
             >Web<span class="logo-part">Studio</span></a
@@ -40,15 +40,20 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="mobile-btn">
+          <svg class="mobile-btn-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
         <address class="address">
           <ul class="address-list">
             <li>
-              <a class="addres-link" href="mailto:info@devstudio.com"
+              <a class="address-link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li>
-              <a class="addres-link" href="tel:+110001111111"
+              <a class="address-link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
@@ -75,7 +80,7 @@
 
       <!-- Tech -->
 
-      <section class="tech section">
+      <section class="tech">
         <div class="container">
           <h2 class="visually-hidden">Team Strategy</h2>
           <ul class="tech-list">
@@ -133,12 +138,16 @@
 
       <!-- Team -->
 
-      <section class="team-main section">
+      <section class="team-main">
         <div class="team-container container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list">
             <li class="team-list-item">
               <img
+                srcset="
+                  ./images/team/MarkGuerrero.jpg    1x,
+                  ./images/team/MarkGuerrero@2x.jpg 2x
+                "
                 src="./images/team/MarkGuerrero.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -179,7 +188,15 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img src="./images/team/TomFord.jpg" alt="Tom Ford" width="264" />
+              <img
+                srcset="
+                  ./images/team/TomFord.jpg    1x,
+                  ./images/team/TomFord@2x.jpg 2x
+                "
+                src="./images/team/TomFord.jpg"
+                alt="Tom Ford"
+                width="264"
+              />
               <div class="team-proffesion">
                 <h3 class="team-title-name">Tom Ford</h3>
                 <p class="team-title-info">Frontend Developer</p>
@@ -217,6 +234,10 @@
             </li>
             <li class="team-list-item">
               <img
+                srcset="
+                  ./images/team/CamilaGarcia.jpg    1x,
+                  ./images/team/CamilaGarcia@2x.jpg 2x
+                "
                 src="./images/team/CamilaGarcia.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -258,6 +279,10 @@
             </li>
             <li class="team-list-item">
               <img
+                srcset="
+                  ./images/team/DanielWilson.jpg    1x,
+                  ./images/team/DanielWilson@2x.jpg 2x
+                "
                 src="./images/team/DanielWilson.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -303,14 +328,18 @@
 
       <!-- Portfolio -->
 
-      <section class="portfolio section">
+      <section class="portfolio">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="potfolio-list">
             <li class="portfolio-item">
               <div class="overlay-portfolio">
                 <img
-                  src="./images/portfolio/img1.jpg"
+                  srcset="
+                    ./images/portfolio/img1-desc-min.jpg    1x,
+                    ./images/portfolio/img1-desc@2x-min.jpg 2x
+                  "
+                  src="./images/portfolio/img1-desc-min.jpg"
                   alt="Banking App"
                   width="360"
                 />
@@ -328,7 +357,11 @@
             <li class="portfolio-item">
               <div class="overlay-portfolio">
                 <img
-                  src="./images/portfolio/img2.jpg"
+                  srcset="
+                    ./images/portfolio/img2-desc-min.jpg    1x,
+                    ./images/portfolio/img2-desc@2x-min.jpg 2x
+                  "
+                  src="./images/portfolio/img2-desc-min.jpg"
                   alt="Cashless Payment"
                   width="360"
                 />
@@ -346,7 +379,11 @@
             <li class="portfolio-item">
               <div class="overlay-portfolio">
                 <img
-                  src="./images/portfolio/img3.jpg"
+                  srcset="
+                    ./images/portfolio/img3-desc-min.jpg    1x,
+                    ./images/portfolio/img3-desc@2x-min.jpg 2x
+                  "
+                  src="./images/portfolio/img3-desc-min.jpg 1x"
                   alt="Meditation App"
                   width="360"
                 />
@@ -364,7 +401,11 @@
             <li class="portfolio-item">
               <div class="overlay-portfolio">
                 <img
-                  src="./images/portfolio/img4.jpg"
+                  srcset="
+                    ./images/portfolio/img4-desc-min.jpg    1x,
+                    ./images/portfolio/img4-desc@2x-min.jpg 2x
+                  "
+                  src="./images/portfolio/img4-desc-min.jpg 1x"
                   alt="Taxi Service"
                   width="360"
                 />
@@ -382,7 +423,11 @@
             <li class="portfolio-item">
               <div class="overlay-portfolio">
                 <img
-                  src="./images/portfolio/img5.jpg"
+                  srcset="
+                    ./images/portfolio/img5-desc@2x-min.jpg,
+                    ./images/portfolio/img5-desc@2x-min.jpg 2x
+                  "
+                  src="./images/portfolio/img5-desc@2x-min.jpg"
                   alt="Screen Illustrations"
                   width="360"
                 />
@@ -400,7 +445,11 @@
             <li class="portfolio-item">
               <div class="overlay-portfolio">
                 <img
-                  src="./images/portfolio/img6.jpg"
+                  srcset="
+                    ./images/portfolio/img6-desc-min.jpg    1x,
+                    ./images/portfolio/img6-desc@2x-min.jpg 2x
+                  "
+                  src="./images/portfolio/img6-desc-min.jpg 1x"
                   alt="Online Courses"
                   width="360"
                 />
@@ -492,7 +541,7 @@
 
     <!--  BACKDROP -->
 
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
         <button type="button" class="modal-close-btn">
           <svg class="modal-close-icon" width="8" height="8">
@@ -591,6 +640,80 @@
           </div>
           <button type="submit" class="review-form-submit">Send</button>
         </form>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+      <div class="container mobile-menu-conteiner">
+        <button type="button" class="mobile-menu-close-btn">
+          <svg class="mobile-menu-close-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-list">
+            <li class="mobile-menu-list-item">
+              <a
+                class="modile-menu-list-link mobile-menu-list-link-current"
+                href=""
+                >Studio</a
+              >
+            </li>
+            <li class="mobile-menu-list-item">
+              <a class="modile-menu-list-link" href="">Portfolio</a>
+            </li>
+            <li class="mobile-menu-list-item">
+              <a class="modile-menu-list-link" href="">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="address-menu">
+          <ul class="address-menu-list">
+            <li class="address-menu-list-item">
+              <a
+                href="tel:+110001111111"
+                class="address-menu-list-link address-menu-list-link-current"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="address-menu-list-item">
+              <a href="mailto:info@devstudio.com" class="address-menu-list-link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="icon-container-menu">
+          <li class="icon-container-menu-item">
+            <a class="icon-conteiner-menu-link" href="">
+              <svg class="icon-conteiner-menu-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-container-menu-item">
+            <a class="icon-conteiner-menu-link" href="">
+              <svg class="icon-conteiner-menu-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-container-menu-item">
+            <a class="icon-conteiner-menu-link" href="">
+              <svg class="icon-conteiner-menu-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-container-menu-item">
+            <a class="icon-conteiner-menu-link" href="">
+              <svg class="icon-conteiner-menu-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </body>
