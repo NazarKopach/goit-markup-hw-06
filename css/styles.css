@@ -1,4 +1,3 @@
-
 /*========= COMMON =========*/
 
 body {
@@ -343,7 +342,7 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("../images/hero-image.jpg");
+    url("../images/hero-image-mobile.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -393,13 +392,13 @@ button {
   background-color: #404bbf;
 }
 
-@media screen and (min-width: 767px) and (min-resolution: 192dpi) {
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero-image@2x.jpg);
+      url(../images/hero-image-mobile@2x.jpg);
   }
 }
 
@@ -408,10 +407,21 @@ button {
     max-width: 768px;
     min-height: 436px;
     padding: 112px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)),
+        url(../images/hero-image-tablet.jpg);
   }
 
   .hero-title {
     margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+      url(../images/hero-image-tablet@2x.jpg);
   }
 }
 
@@ -420,10 +430,21 @@ button {
     max-width: 1440px;
     min-height: 600px;
     padding: 188px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)),
+        url(../images/hero-image-desc.jpg);
   }
 
   .hero-title {
     margin-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+      url(../images/hero-image-desc@2x.jpg);
   }
 }
 
@@ -714,6 +735,7 @@ button {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
+    margin-bottom: 96px;
   }
 
   .portfolio-item {
@@ -724,6 +746,10 @@ button {
 @media screen and (min-width: 1158px) {
   .portfolio-item {
     width: calc((100% - 72px) / 3);
+  }
+
+  .potfolio-list {
+    margin-bottom: 120px;
   }
 }
 
@@ -832,7 +858,7 @@ button {
 .subscribe-form-input {
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 288px;
+  width: 264px;
   height: 40px;
   padding-left: 16px;
   margin-bottom: 16px;
@@ -883,9 +909,8 @@ button {
   .footer {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 72px;
     column-gap: 24px;
-    justify-content:center;
+    justify-content: center;
   }
 
   .footer-info {
@@ -894,6 +919,10 @@ button {
 
   .logo-footer {
     text-align: start;
+  }
+
+  .subscribe-wrapper {
+    margin-right: 45px;
   }
 
   .subscribe-form {
@@ -912,11 +941,15 @@ button {
     flex-wrap: nowrap;
   }
 
-  .container-logo{
+  .subscribe-wrapper {
+    margin-right: 0;
+  }
+
+  .container-logo {
     margin-right: 120px;
   }
 
-  .footer-media{
+  .footer-media {
     margin-right: 80px;
   }
 }
@@ -934,7 +967,8 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -956,8 +990,7 @@ button {
   min-height: 623px;
   background-color: #fcfcfc;
   border-radius: 4px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12),
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -976,7 +1009,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
@@ -989,8 +1023,8 @@ button {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover>.modal-close-icon,
-.modal-close-btn:focus>.modal-close-icon {
+.modal-close-btn:hover > .modal-close-icon,
+.modal-close-btn:focus > .modal-close-icon {
   fill: #ffffff;
 }
 
@@ -1033,12 +1067,12 @@ button {
 }
 
 .review-form-input:focus {
-  border-color: #4D5AE5;
+  border-color: #4d5ae5;
   outline: transparent;
 }
 
-.review-form-input:focus+.review-form-fiel-icon {
-  fill: #4D5AE5;
+.review-form-input:focus + .review-form-fiel-icon {
+  fill: #4d5ae5;
 }
 
 .review-form-message {
@@ -1058,7 +1092,7 @@ button {
 }
 
 .review-form-message:focus {
-  border-color: #4D5AE5;
+  border-color: #4d5ae5;
   outline: transparent;
 }
 
@@ -1098,13 +1132,17 @@ button {
   text-decoration: underline;
 }
 
-.review-form-checkbox:checked+.review-form-checkbox-label .review-form-own-checkbox {
+.review-form-checkbox:checked
+  + .review-form-checkbox-label
+  .review-form-own-checkbox {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
 }
 
-.review-form-checkbox:focus+.review-form-checkbox-label .review-form-own-checkbox {
+.review-form-checkbox:focus
+  + .review-form-checkbox-label
+  .review-form-own-checkbox {
   outline: 2px solid rgba(0, 0, 255, 0.5);
 }
 
@@ -1118,7 +1156,9 @@ button {
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .review-form-submit {
@@ -1147,15 +1187,15 @@ button {
   background-color: #404bbf;
 }
 
-@media screen and (min-width:768px){
-  .modal{
+@media screen and (min-width: 768px) {
+  .modal {
     padding-right: 24px;
     padding-left: 24px;
     width: 408px;
     min-height: height 584px;
   }
 
-    .review-form-input{
-      width: 360px;
-    }
+  .review-form-input {
+    width: 360px;
+  }
 }
